@@ -6,6 +6,7 @@ Found on:
 
 - [PyPi](https://pypi.org/project/build_nextjs_app/)
 - [Docker Hub](https://hub.docker.com/r/achronus/nextjs_app)
+- [GitHub](https://github.com/Achronus/build-nextjs-app/)
 
 It consists of the following packages, libraries and frameworks:
 
@@ -44,7 +45,7 @@ To achieve this, we use Docker with GitHub actions.
 3. Run it with your desired `project_name`
 
    ```python
-   build_nextjs_app <project_name>
+   build-nextjs-app <project_name>
    ```
 
 And that's it! Open the project folder and you'll see a directory called `frontend` with all the assets.
