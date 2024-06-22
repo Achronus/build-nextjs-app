@@ -50,6 +50,40 @@ To achieve this, we use Docker with GitHub actions.
 
 And that's it! Open the project folder and you'll see all the assets.
 
+## In Need of an Env File?
+
+Because of the way we use this tool (see the next section), we haven't added an `.env` file. However, we understand their importance and encourage you to use this as a template:
+
+```python
+# Uploadthing: storing files and handling file uploading
+# https://uploadthing.com/
+UPLOADTHING_SECRET=
+NEXT_PUBLIC_UPLOADTHING_APP_ID=
+
+# Clerk: User Authentication
+# https://clerk.com/docs/quickstarts/nextjs
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/auth/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/auth/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+
+# Stripe: user payments
+# https://stripe.com/docs
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+NEXT_PUBLIC_STRIPE_CLIENT_ID=
+NEXT_PUBLIC_PLATFORM_SUBSCRIPTION_PERCENT=1
+NEXT_PUBLIC_PLATFORM_ONETIME_FEE=2
+NEXT_PUBLIC_PLATFORM_PERCENT=1
+NEXT_PRODUCT_ID=
+```
+
+Also, we've added the `dotenv` packages to provide accessibility to `.env` files outside of the existing directory, such as projects for our own use case.
+
 ## Need a Backend Too?
 
 We personally use this in our [create-api-app](https://github.com/Achronus/create-api-app) tool for building applications with a FastAPI backend and NextJS frontend.
