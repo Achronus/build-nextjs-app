@@ -48,7 +48,7 @@ To achieve this, we use Docker with GitHub actions.
    build-nextjs-app <project_name>
    ```
 
-And that's it! Open the project folder and you'll see a directory called `frontend` with all the assets.
+And that's it! Open the project folder and you'll see all the assets.
 
 ## Need a Backend Too?
 

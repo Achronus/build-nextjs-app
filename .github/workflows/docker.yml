@@ -40,14 +40,14 @@ jobs:
       - name: Build and tag Docker image
         id: docker_build
         run: |
-          docker buildx build --file Dockerfile --tag achronus/build_nextjs_app:latest .
+          docker buildx build --file Dockerfile --tag achronus/nextjs_app:latest .
           NEXT_VERSION=${{ steps.calculate_next_version.outputs.next_version }}
-          docker tag achronus/build_nextjs_app:latest achronus/build_nextjs_app:${NEXT_VERSION}
+          docker tag achronus/nextjs_app:latest achronus/nextjs_app:${NEXT_VERSION}
 
       - name: Push Docker image
         if: success() && github.event_name == 'schedule'
         run: |
           echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
-          docker push achronus/build_nextjs_app:latest
+          docker push achronus/nextjs_app:latest
           NEXT_VERSION=${{ steps.calculate_next_version.outputs.next_version }}
-          docker push achronus/build_nextjs_app:${NEXT_VERSION}
+          docker push achronus/nextjs_app:${NEXT_VERSION}
