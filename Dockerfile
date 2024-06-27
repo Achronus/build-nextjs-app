@@ -21,7 +21,8 @@ FROM base AS builder
 # Install packages
 RUN bunx create-next-app@latest . --ts --tailwind --eslint --app --src-dir --import-alias "@/*" --use-bun && \
     bunx shadcn-ui@latest init -d && \
-    bun add uploadthing @uploadthing/react dotenv dotenv-expand lucide-react @clerk/nextjs @stripe/react-stripe-js @stripe/stripe-js && \
+    bun add uploadthing @uploadthing/react dotenv lucide-react @clerk/nextjs && \
+    bun add --save @stripe/react-stripe-js @stripe/stripe-js && \
     rm -rf node_modules
 
 ########################################

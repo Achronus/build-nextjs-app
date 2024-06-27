@@ -13,7 +13,6 @@ It consists of the following packages, libraries and frameworks:
 - [Shadcn/ui](https://ui.shadcn.com/)
 - [Uploadthing](https://uploadthing.com/)
 - [dotenv](https://www.npmjs.com/package/dotenv)
-- [dotenv-expand](https://www.npmjs.com/package/dotenv-expand)
 - [Lucide React Icons](https://lucide.dev/)
 - [Clerk](https://clerk.com/)
 - [Stripe](https://docs.stripe.com/stripe-js/react?locale=en-GB)
@@ -82,7 +81,7 @@ NEXT_PUBLIC_PLATFORM_PERCENT=1
 NEXT_PRODUCT_ID=
 ```
 
-Also, we've added the `dotenv` packages to provide accessibility to `.env` files outside of the existing directory, such as projects for our own use case.
+Also, we've added the `dotenv` package to provide accessibility to `.env` files outside of the existing directory, such as projects for our own use case.
 
 ## Need a Backend Too?
 
